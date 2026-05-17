@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="Divyansh Agarwal — Interfaces, services, and the wires between them.">
+  <defs>
+    <linearGradient id="bg" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#070707"/>
+    </linearGradient>
+
+    <linearGradient id="bezel" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#202020"/>
+      <stop offset="45%" stop-color="#0e0e0e"/>
+      <stop offset="100%" stop-color="#1a1a1a"/>
+    </linearGradient>
+
+    <linearGradient id="bezelHi" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a2a2a"/>
+      <stop offset="100%" stop-color="#080808"/>
+    </linearGradient>
+
+    <radialGradient id="screen" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#0c1a06"/>
+      <stop offset="55%" stop-color="#06100c"/>
+      <stop offset="100%" stop-color="#020602"/>
+    </radialGradient>
+
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="55%" stop-color="rgba(0,0,0,0)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.55)"/>
+    </radialGradient>
+
+    <pattern id="scan" x="0" y="0" width="3" height="3" patternUnits="userSpaceOnUse">
+      <rect width="3" height="1.5" fill="transparent"/>
+      <rect y="1.5" width="3" height="1.5" fill="rgba(200,255,61,0.035)"/>
+    </pattern>
+
+    <filter id="phosphor" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="0.8" result="blur1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="blur2"/>
+      <feColorMatrix in="blur2" type="matrix" values="0 0 0 0 0.78  0 0 0 0 1  0 0 0 0 0.24  0 0 0 0.7 0" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- bg -->
+  <rect width="1200" height="520" fill="url(#bg)"/>
+
+  <!-- editorial brackets -->
+  <g stroke="#9c9c9c" stroke-width="1" fill="none" opacity="0.35">
+    <path d="M 40 38 L 24 38 L 24 22 L 40 22"/>
+    <path d="M 1160 38 L 1176 38 L 1176 22 L 1160 22"/>
+    <path d="M 40 482 L 24 482 L 24 498 L 40 498"/>
+    <path d="M 1160 482 L 1176 482 L 1176 498 L 1160 498"/>
+  </g>
+
+  <!-- top label -->
+  <text x="60" y="34" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" fill="#9c9c9c" letter-spacing="3">00 / HERO</text>
+  <text x="1140" y="34" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" fill="#9c9c9c" letter-spacing="3">▸ DIVYANSHAGARWAL.ME</text>
+
+  <!-- monitor stand -->
+  <rect x="540" y="448" width="120" height="12" rx="2" fill="#141414" stroke="#1f1f1f"/>
+  <path d="M 580 410 L 620 410 L 624 448 L 576 448 Z" fill="#0f0f0f" stroke="#1f1f1f"/>
+
+  <!-- CRT chassis -->
+  <rect x="120" y="60" width="960" height="360" rx="14" fill="url(#bezel)" stroke="#2a2a2a" stroke-width="1"/>
+  <rect x="120" y="60" width="960" height="2" fill="url(#bezelHi)" opacity="0.6"/>
+
+  <!-- inner bezel ridge -->
+  <rect x="138" y="78" width="924" height="324" rx="9" fill="none" stroke="#000" stroke-width="1.2"/>
+  <rect x="139" y="79" width="922" height="322" rx="8" fill="none" stroke="#2a2a2a" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- screen -->
+  <rect x="155" y="94" width="890" height="292" rx="6" fill="url(#screen)"/>
+  <rect x="155" y="94" width="890" height="292" rx="6" fill="url(#scan)"/>
+  <rect x="155" y="94" width="890" height="292" rx="6" fill="url(#vignette)"/>
+
+  <!-- on-air pill (above the prompt block) -->
+  <g transform="translate(890, 116)">
+    <rect x="0" y="0" width="130" height="22" rx="11" fill="#0a0a0a" stroke="#C8FF3D" stroke-width="0.6" opacity="0.9"/>
+    <circle cx="14" cy="11" r="4" fill="#C8FF3D">
+      <animate attributeName="opacity" values="1;0.25;1" dur="1.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="28" y="15" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="700" fill="#C8FF3D" letter-spacing="2.2">ON AIR</text>
+    <text x="78" y="15" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="9" fill="#9c9c9c" letter-spacing="1.5">· CH 01</text>
+  </g>
+
+  <!-- screen content (phosphor) -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" filter="url(#phosphor)">
+    <text x="185" y="144" font-size="13" fill="#C8FF3D" opacity="0.75">$ whoami</text>
+
+    <text x="185" y="204" font-size="46" font-weight="700" fill="#C8FF3D" letter-spacing="2.5">DIVYANSH AGARWAL</text>
+
+    <line x1="185" y1="226" x2="1015" y2="226" stroke="#C8FF3D" stroke-width="0.5" opacity="0.35"/>
+
+    <text x="185" y="260" font-size="17" fill="#f5f5f5" opacity="0.92">Interfaces, services, and the wires between them.</text>
+
+    <text x="185" y="306" font-size="13" fill="#9c9c9c">role     <tspan fill="#f5f5f5">full-stack engineer · games · motion</tspan></text>
+    <text x="185" y="328" font-size="13" fill="#9c9c9c">based    <tspan fill="#f5f5f5">india · utc+5:30</tspan></text>
+    <text x="185" y="350" font-size="13" fill="#9c9c9c">status   <tspan fill="#C8FF3D">open to full-stack · game dev work</tspan></text>
+
+    <text x="185" y="382" font-size="13" fill="#C8FF3D">$</text>
+    <rect x="200" y="371" width="10" height="14" fill="#C8FF3D">
+      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.51;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- channel knob -->
+  <g transform="translate(1000, 380)">
+    <circle r="14" fill="#141414" stroke="#2a2a2a"/>
+    <circle r="8" fill="#0a0a0a"/>
+    <line x1="0" y1="-8" x2="0" y2="-3" stroke="#C8FF3D" stroke-width="1.5"/>
+    <text x="0" y="32" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="8" fill="#9c9c9c" letter-spacing="2">CHANNEL</text>
+  </g>
+
+  <!-- power LED -->
+  <circle cx="1042" cy="390" r="3" fill="#C8FF3D">
+    <animate attributeName="opacity" values="1;0.55;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="1050" y="394" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="8" fill="#9c9c9c" letter-spacing="2">PWR</text>
+
+  <!-- bottom credits -->
+  <text x="60" y="502" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="9" fill="#9c9c9c" letter-spacing="3" opacity="0.75">CRT · phosphor lime #C8FF3D</text>
+  <text x="1140" y="502" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="9" fill="#9c9c9c" letter-spacing="3" opacity="0.75">— signal clear —</text>
+</svg>
